@@ -1,0 +1,27 @@
+{
+  "name": "text-reveal.js",
+  "version": "0.1.0",
+  "description": "A lightweight JavaScript library for creating beautiful text reveal animations that trigger on scroll.",
+  "main": "text-reveal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogeriotaques/text-reveal.js.git"
+  },
+  "keywords": [
+    "text",
+    "reveal",
+    "lightweight",
+    "customizable",
+    "zero-depencies",
+    "vanilla-js"
+  ],
+  "author": "Rogerio Taques",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogeriotaques/text-reveal.js/issues"
+  },
+  "homepage": "https://github.com/rogeriotaques/text-reveal.js#readme"
+}
