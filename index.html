@@ -1,83 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
         <title>TextFlashyReveal.js</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="TextFlashyReveal.js - A JavaScript library for animated text reveal effects. See how to implement smooth text animations that trigger on scroll." />
-        <meta name="keywords" content="TextFlashyReveal.js, JavaScript, text animation, scroll animation, text reveal, web animation, CSS animation" />
+        <meta
+            name="description"
+            content="TextFlashyReveal.js - A JavaScript library for animated text reveal effects. See how to implement smooth text animations that trigger on scroll."
+        />
+        <meta
+            name="keywords"
+            content="TextFlashyReveal.js, JavaScript, text animation, scroll animation, text reveal, web animation, CSS animation"
+        />
         <meta name="author" content="Rogerio Taques" />
-        <meta property="og:title" content="TextFlashyReveal.js - Animated Text Reveal Library" />
-        <meta property="og:description" content="Sample page demonstrating TextFlashyReveal.js - a JavaScript library for creating smooth text reveal animations on scroll." />
+        <meta
+            property="og:title"
+            content="TextFlashyReveal.js - Animated Text Reveal Library"
+        />
+        <meta
+            property="og:description"
+            content="Sample page demonstrating TextFlashyReveal.js - a JavaScript library for creating smooth text reveal animations on scroll."
+        />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="TextFlashyReveal.js - Animated Text Reveal Library" />
-        <meta name="twitter:description" content="Sample page demonstrating TextFlashyReveal.js - a JavaScript library for creating smooth text reveal animations on scroll." />
+        <meta
+            name="twitter:title"
+            content="TextFlashyReveal.js - Animated Text Reveal Library"
+        />
+        <meta
+            name="twitter:description"
+            content="Sample page demonstrating TextFlashyReveal.js - a JavaScript library for creating smooth text reveal animations on scroll."
+        />
         <style>
             body {
                 font-family: system-ui, sans-serif;
-                padding: 80px;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+                box-sizing: border-box;
             }
 
             h1 {
-                font-size: 56px;
+                font-size: clamp(2rem, 8vw, 3.5rem);
                 font-weight: 700;
                 line-height: 1.2;
+                margin: 0.5em 0;
+            }
+
+            h2 {
+                font-size: clamp(1.5rem, 6vw, 2.5rem);
+                font-weight: 600;
+                line-height: 1.3;
+                margin: 0.5em 0;
+            }
+
+            p {
+                font-size: clamp(1rem, 3vw, 1.125rem);
+                line-height: 1.6;
+                margin: 1em 0;
+            }
+
+            a {
+                font-weight: 800;
             }
 
             .gimme-some-space {
                 margin-bottom: 100vh;
+            }
+
+            /* Mobile optimizations */
+            @media (max-width: 768px) {
+                body {
+                    padding: 16px;
+                }
+
+                .gimme-some-space {
+                    margin-bottom: 80vh;
+                }
+
+                hgroup {
+                    margin-bottom: 2em;
+                }
+            }
+
+            /* Small mobile phones */
+            @media (max-width: 480px) {
+                body {
+                    padding: 12px;
+                }
+
+                .gimme-some-space {
+                    margin-bottom: 60vh;
+                }
             }
         </style>
     </head>
     <body>
         <hgroup class="gimme-some-space">
             <h1 id="hero-1">TextFlashyReveal.js</h1>
-            <p>This sample page demonstrates how <b>TextFlashyReveal.js</b> does work.</p>
-            <p>You already saw it working in the title, which flashes every time it gets into the viewport.</p>
+            <p>
+                This sample page demonstrates how
+                <b>TextFlashyReveal.js</b> does work.
+            </p>
+            <p>
+                You already saw it working in the title, which flashes every
+                time it gets into the viewport.
+            </p>
             <p>Now scroll down to see it in action in other patterns... 👇</p>
         </hgroup>
 
         <hgroup class="gimme-some-space">
-            <h2 id="hero-2">This text reveals only once, but always flashes!</h2>
-            <p>The first time this text gets into the viewport, it reveals and flashes. From the second time onwards, it only flashes without revealing. 🤗</p>
+            <h2 id="hero-2">
+                This text reveals only once, but always flashes!
+            </h2>
+            <p>
+                The first time this text gets into the viewport, it reveals and
+                flashes. From the second time onwards, it only flashes without
+                revealing. 🤗
+            </p>
             <p>Keep scrolling down to see it the next pattern... 👇</p>
         </hgroup>
 
         <hgroup>
-            <h2 id="hero-3">Finally, this text reveals and flashes just once!</h2>
-            <p>And this one never animates a second time. Now, scroll back. 👆🤗</p>
+            <h2 id="hero-3">
+                Finally, this text reveals and flashes just once!
+            </h2>
+            <p>
+                And this one never animates a second time. Now, scroll back.
+                👆🤗
+            </p>
         </hgroup>
 
-        <br>
+        <br />
 
         <div>
-            <p>Crafted by <a href="https://x.com/rogeriotaques" target="_blank" rel="noopener noreferrer">Rogerio Taques</a>.</p>
-            <p>Made with ☕️ and plain JavaScript! Distributed under <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT</a> license.</p>
+            <p>
+                Crafted by
+                <a
+                    id="link"
+                    href="https://x.com/rogeriotaques"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Rogerio Taques</a
+                >.
+            </p>
+            <p>
+                Made with ☕️ and plain JavaScript! Distributed under
+                <a
+                    href="https://opensource.org/licenses/MIT"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >MIT</a
+                >
+                license.
+            </p>
+
+            <p>
+                See it on
+                <a
+                    href="https://github.com/rogeriotaques/text-flashy-reveal.js"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                >.
+            </p>
         </div>
 
         <script type="module">
             import { textFlashyReveal } from "./text-flashy-reveal.js";
 
             textFlashyReveal(document.querySelector("#hero-1"), {
-              replay: true,
-              revealDelay: 35,
-              threshold: 0.5
+                replay: true,
+                revealDelay: 35,
+                threshold: 0.5,
             });
 
             textFlashyReveal(document.querySelector("#hero-2"), {
-              revealDelay: 25,
-              threshold: 0.5,
-              fadeDuration: 250,
-              accentColor: 'blue',
-              revealOnReplay: false
+                revealDelay: 25,
+                threshold: 0.5,
+                fadeDuration: 250,
+                accentColor: "lightblue",
+                revealOnReplay: false,
             });
 
             textFlashyReveal(document.querySelector("#hero-3"), {
-              revealDelay: 25,
-              threshold: 0.5,
-              fadeDuration: 250,
-              accentColor: 'green'
+                revealDelay: 25,
+                threshold: 0.5,
+                fadeDuration: 250,
+                accentColor: "lightgreen",
+            });
+
+            textFlashyReveal(document.querySelector("#link"), {
+                revealDelay: 25,
+                threshold: 0.5,
+                fadeDuration: 100,
+                accentColor: "pink",
             });
         </script>
     </body>
