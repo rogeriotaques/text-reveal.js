@@ -1,6 +1,6 @@
 {
   "name": "text-flashy-reveal.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A lightweight JavaScript library for creating beautiful text flashy-reveal animations that trigger on scroll.",
   "main": "text-flashy-reveal.js",
   "repository": {
